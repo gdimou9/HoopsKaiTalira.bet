@@ -1042,3 +1042,34 @@ input {
     height: 640px;
   }
 }
+
+/* Hide the images initially */
+.hidden {
+    opacity: 0;
+    transform: translateX(100%); /* Start off-screen to the right */
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+/* When images are shown */
+.show {
+    opacity: 1;
+    transform: translateX(0); /* Slide in to the normal position */
+}
+
+/* Style for the genie lamp button */
+#genieLamp {
+    font-size: 2rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+#genieLamp i {
+    color: gold;
+}
+
+/* Optional: Style for the images section */
+.about__img {
+    display: flex;
+    gap: 10px;
+}
