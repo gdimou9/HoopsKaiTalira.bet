@@ -172,28 +172,3 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
-
-document.getElementById("genieLamp").addEventListener("click", function(event) {
-    event.preventDefault();
-    var images = document.getElementById("aboutImages");
-
-    // Toggle the classes for animation
-    if (images.classList.contains("hidden")) {
-        images.classList.remove("hidden");
-        images.classList.add("show");
-    } else {
-        images.classList.remove("show");
-        images.classList.add("hidden");
-    }
-});
-
-.hidden {
-    opacity: 0;
-    transform: translateX(100%);
-    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-}
-
-.show {
-    opacity: 1;
-    transform: translateX(0);
-}
