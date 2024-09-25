@@ -186,3 +186,14 @@ document.getElementById("genieLamp").addEventListener("click", function(event) {
         images.classList.add("hidden");
     }
 });
+
+.hidden {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
