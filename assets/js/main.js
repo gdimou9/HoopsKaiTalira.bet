@@ -172,3 +172,17 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+document.getElementById("genieLamp").addEventListener("click", function(event) {
+    event.preventDefault();
+    var images = document.getElementById("aboutImages");
+
+    // Toggle the classes for animation
+    if (images.classList.contains("hidden")) {
+        images.classList.remove("hidden");
+        images.classList.add("show");
+    } else {
+        images.classList.remove("show");
+        images.classList.add("hidden");
+    }
+});
