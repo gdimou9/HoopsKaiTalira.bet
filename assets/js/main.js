@@ -172,3 +172,23 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+document.getElementById("genieLamp").addEventListener("click", function() {
+    // Show the smoke animation
+    const smoke = document.getElementById("smoke");
+    smoke.style.opacity = 1; // Start the smoke animation
+
+    // Show the images after the smoke animation duration
+    setTimeout(function() {
+        const images = document.getElementById("images");
+        images.style.display = "block"; // Make images visible
+        const imgElements = images.getElementsByTagName("img");
+
+        // Reveal images with a fade-in effect
+        for (let i = 0; i < imgElements.length; i++) {
+            setTimeout(function() {
+                imgElements[i].style.opacity = 1; // Fade in each image
+            }, i * 500); // Stagger the reveal
+        }
+    }, 2000); // Duration matches the smoke animation
+});
