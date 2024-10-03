@@ -1056,7 +1056,7 @@ input {
         transform: translateY(0);
     }
     100% {
-        opacity: 1;
+        opacity: 0.5;
         transform: translateY(-50px);
     }
 }
