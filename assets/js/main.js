@@ -173,22 +173,16 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
-document.getElementById("genieLamp").addEventListener("click", function() {
-    // Show the smoke animation
-    const smoke = document.getElementById("smoke");
-    smoke.style.opacity = 1; // Start the smoke animation
+document.getElementById("genieLampButton").addEventListener("click", function() {
+    const images = document.querySelectorAll(".about__img-overlay img");
 
-    // Show the images after the smoke animation duration
-    setTimeout(function() {
-        const images = document.getElementById("images");
-        images.style.display = "block"; // Make images visible
-        const imgElements = images.getElementsByTagName("img");
+    // Add smoke effect class
+    this.classList.add("smoke-effect");
 
-        // Reveal images with a fade-in effect
-        for (let i = 0; i < imgElements.length; i++) {
-            setTimeout(function() {
-                imgElements[i].style.opacity = 1; // Fade in each image
-            }, i * 500); // Stagger the reveal
-        }
-    }, 2000); // Duration matches the smoke animation
+    // Reveal images after smoke effect
+    setTimeout(() => {
+        images.forEach(img => {
+            img.style.opacity = 1; // Gradually reveal the images
+        });
+    }, 1000); // Match this duration to the smoke animation duration
 });
