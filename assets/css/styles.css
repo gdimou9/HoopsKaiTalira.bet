@@ -1046,8 +1046,8 @@ input {
 .genie-lamp {
     cursor: pointer;
     width: 100px; /* Adjust size as needed */
-    position: relative; /* Needed for positioning smoke effect */
-    z-index: 10; /* Ensure lamp is above the smoke */
+    position: relative;
+    z-index: 10;
 }
 
 @keyframes smoke {
@@ -1062,26 +1062,24 @@ input {
 }
 
 .smoke-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.5); /* Grey smoke effect */
+    pointer-events: none; /* Ensures it doesn't interfere with clicks */
     animation: smoke 1s forwards;
+    z-index: 5; /* Ensure smoke is below the lamp but above images */
 }
 
 .about__img-overlay img {
     transition: opacity 1s ease;
-    opacity: 0; /* Ensure images are initially hidden */
-}
-
-.smoke-overlay {
-    position: absolute; /* Positioning above the images */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.5); /* Semi-transparent white for smoke effect */
     opacity: 0; /* Initially hidden */
-    transition: opacity 1s ease; /* Smooth transition for the smoke overlay */
-    z-index: 5; /* Position below the genie lamp but above images */
+    z-index: 1;
 }
 
-.smoke-overlay.visible {
-    opacity: 1; /* Show smoke overlay when visible */
+/* Ensure homepage images or other elements are unaffected */
+#home img {
+    opacity: 1; /* Make sure home image remains visible */
 }
