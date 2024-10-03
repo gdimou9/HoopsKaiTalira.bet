@@ -1046,7 +1046,8 @@ input {
 .genie-lamp {
     cursor: pointer;
     width: 100px; /* Adjust size as needed */
-    /* Add additional styling for your genie lamp */
+    position: relative; /* Needed for positioning smoke effect */
+    z-index: 10; /* Ensure lamp is above the smoke */
 }
 
 @keyframes smoke {
@@ -1066,4 +1067,5 @@ input {
 
 .about__img-overlay img {
     transition: opacity 1s ease;
+    opacity: 0; /* Ensure images are initially hidden */
 }
