@@ -179,10 +179,15 @@ document.getElementById("genieLampButton").addEventListener("click", function() 
     // Add smoke effect class
     this.classList.add("smoke-effect");
 
-    // Reveal images after smoke effect
+    // Reveal images after smoke effect (1 second to match CSS duration)
     setTimeout(() => {
         images.forEach(img => {
             img.style.opacity = 1; // Gradually reveal the images
         });
     }, 1000); // Match this duration to the smoke animation duration
+
+    // Optional: remove the smoke effect class after the animation for reusability
+    setTimeout(() => {
+        this.classList.remove("smoke-effect");
+    }, 1500); // Duration longer than animation to reset the effect
 });
