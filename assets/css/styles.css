@@ -1042,3 +1042,47 @@ input {
     height: 640px;
   }
 }
+
+.genie-lamp {
+    width: 100px; /* Adjust size as needed */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    position: relative; /* Position relative for smoke effect */
+}
+
+.smoke {
+    position: absolute;
+    top: -50px; /* Adjust to position smoke */
+    left: 20%; /* Center below the lamp */
+    width: 60px; /* Adjust to the width of the smoke */
+    height: 100px; /* Adjust to the height of the smoke */
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%; /* Make it roundish */
+    opacity: 0; /* Hidden by default */
+    animation: smokeAnimation 2s forwards; /* Smoke animation */
+}
+
+@keyframes smokeAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+}
+
+.images {
+    display: none; /* Hide images by default */
+}
+
+.images img {
+    display: block; /* Display block to take full width */
+    margin: 10px 0; /* Margin between images */
+    opacity: 0; /* Hidden initially */
+    transition: opacity 1s; /* Smooth transition for reveal */
+}
