@@ -175,22 +175,19 @@ themeButton.addEventListener('click', () => {
 
 document.getElementById("genieLampButton").addEventListener("click", function() {
     const images = document.querySelectorAll(".about__img-overlay img");
-    const smokeOverlay = document.getElementById("smokeOverlay");
 
-    // Add smoke effect class
-    this.classList.add("smoke-effect");
-    smokeOverlay.classList.add("visible"); // Show smoke overlay
+    // Add smoke effect around the images
+    images.forEach(img => {
+        const overlay = img.closest('.about__img-overlay');
+        const smokeDiv = document.createElement("div");
+        smokeDiv.classList.add("smoke-effect");
+        overlay.appendChild(smokeDiv);
+    });
 
-    // Reveal images after smoke effect (1 second to match CSS duration)
+    // Reveal images after smoke effect
     setTimeout(() => {
         images.forEach(img => {
-            img.classList.add("visible"); // Add class to gradually reveal the images
+            img.style.opacity = 1;
         });
     }, 1000); // Match this duration to the smoke animation duration
-
-    // Remove the smoke effect class after the animation for reusability
-    setTimeout(() => {
-        this.classList.remove("smoke-effect");
-        smokeOverlay.classList.remove("visible"); // Hide smoke overlay
-    }, 1500); // Duration longer than animation to reset the effect
 });
