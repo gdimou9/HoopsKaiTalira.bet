@@ -1050,17 +1050,6 @@ input {
     z-index: 10;
 }
 
-@keyframes smoke {
-    0% {
-        opacity: 0;
-        transform: translateY(0);
-    }
-    100% {
-        opacity: 0.5;
-        transform: translateY(-50px);
-    }
-}
-
 .smoke-effect {
     position: absolute;
     top: 0;
@@ -1082,4 +1071,15 @@ input {
 /* Ensure homepage images or other elements are unaffected */
 #home img {
     opacity: 1; /* Make sure home image remains visible */
+}
+
+@keyframes smoke {
+    0% {
+        opacity: 0.7;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
 }
