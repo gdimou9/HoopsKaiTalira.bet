@@ -1055,33 +1055,33 @@ input {
         opacity: 0;
         transform: translateY(0);
     }
-    50% {
-        opacity: 0.6; /* Partially visible during animation */
-        transform: translateY(-20px); /* Slight upward movement */
-    }
     100% {
-        opacity: 0; /* Disappear at the end */
-        transform: translateY(-50px); /* Move further up */
+        opacity: 1;
+        transform: translateY(-50px);
     }
 }
 
 .smoke-effect {
-    position: absolute; /* Position smoke effect relative to the lamp */
-    bottom: 100%; /* Position above the lamp */
-    left: 50%; /* Center it horizontally */
-    transform: translateX(-50%); /* Adjust to center */
-    width: 100px; /* Adjust width as needed */
-    height: 50px; /* Height of smoke effect */
-    background: rgba(255, 255, 255, 0.5); /* Light smoke color */
-    border-radius: 50%; /* Rounded edges for smoke effect */
-    animation: smoke 1s forwards; /* Apply the smoke animation */
+    animation: smoke 1s forwards;
 }
 
 .about__img-overlay img {
-    transition: opacity 1s ease; /* Smooth transition for opacity */
+    transition: opacity 1s ease;
     opacity: 0; /* Ensure images are initially hidden */
 }
 
-.about__img-overlay img.visible {
-    opacity: 1; /* Fully visible when revealed */
+.smoke-overlay {
+    position: absolute; /* Positioning above the images */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent white for smoke effect */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease; /* Smooth transition for the smoke overlay */
+    z-index: 5; /* Position below the genie lamp but above images */
+}
+
+.smoke-overlay.visible {
+    opacity: 1; /* Show smoke overlay when visible */
 }
