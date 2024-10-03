@@ -182,7 +182,6 @@ document.getElementById("genieLampButton").addEventListener("click", function() 
         const smokeDiv = document.createElement("div");
         smokeDiv.classList.add("smoke-effect");
         overlay.appendChild(smokeDiv);
-    });
       
         // Remove the smoke effect after the animation ends
         setTimeout(() => {
