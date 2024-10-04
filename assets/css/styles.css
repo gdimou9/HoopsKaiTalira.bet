@@ -1039,7 +1039,7 @@ input {
     margin: 0;
   }
   .home__container, .home__img {
-    height: auto;
+    height: 721px;
   }
 }
 
