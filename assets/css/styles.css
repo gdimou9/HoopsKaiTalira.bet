@@ -298,8 +298,8 @@ input {
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;
-  object-fit: cover;
+  height: 100%;
+  object-fit: contain;
   object-position: center;
 }
 
