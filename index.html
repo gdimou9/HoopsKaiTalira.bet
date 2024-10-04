@@ -353,8 +353,8 @@
           <section class="subscribe section">
                 <div class="subscribe__bg">
                     <div class="subscribe__container container">
-                        <h2 class="section__title subscribe__title">Επικοινωνήστε <br> Μαζί Μας</h2>
-                        <p class="subscribe__description">Στείλτε μας το μήνυμά σας για οποιαδήποτε απορία και η ομάδα μας θα επικοινωνήσει το συντομότερο.</p>
+                        <h2 class="section__title subscribe__title">Επικοινωνήστε Μαζί Μας</h2>
+                        <p class="subscribe__description"><b>Στείλτε μας το μήνυμά σας για οποιαδήποτε απορία και η ομάδα μας θα επικοινωνήσει το συντομότερο.</b> <br> Πατώντας το κουμπί "Αποστολή", θα ανοίξει η εφαρμογή email σας με το μήνυμά σας, έτοιμο προς αποστολή στο team του <b>Hoops & Talira</b>.</p>
             
                         <form id="contact-form" class="subscribe__form" onsubmit="sendEmail(event)">
                             <input type="text" id="message" placeholder="Το μήνυμά σας..." class="subscribe__input" required>
@@ -373,7 +373,7 @@
                 
                 // Create a mailto link and open it
                 window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
-            }
+                }
             </script>
 
       
