@@ -294,12 +294,12 @@ input {
 
 /*=============== HOME ===============*/
 .home__img {
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
 }
 
