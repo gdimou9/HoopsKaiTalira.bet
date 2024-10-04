@@ -831,11 +831,8 @@ input {
 
 /* For medium devices */
 @media screen and (min-width: 568px) {
-  .home__container {
-    padding: 0.5rem;
-  }
   .video__container {
-    display: block;
+    display: grid;
     grid-template-columns: .6fr;
     justify-content: center;
   }
