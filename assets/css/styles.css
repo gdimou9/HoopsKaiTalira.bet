@@ -1046,7 +1046,7 @@ input {
 .genie-lamp {
     cursor: pointer;
     width: 200px; /* Adjust size as needed */
-    height: 150px;
+    height: 200px;
     position: relative;
     z-index: 10;
 }
