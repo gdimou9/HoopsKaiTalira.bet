@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     exitButton.addEventListener('click', () => {
-        alert('Λυπάμαι, δεν μπορείτε να εισέλθετε στην ιστοσελίδα.');
-        window.location.href = 'https://www.example.com'; // Replace with your desired exit page
+        alert('Δυστυχώς, δεν μπορείτε να εισέλθετε στην ιστοσελίδα, καθώς απαιτείται να είστε τουλάχιστον 18 ετών!');
+        window.location.href = 'https://www.google.com'; // Replace with your desired exit page
     });
 });
