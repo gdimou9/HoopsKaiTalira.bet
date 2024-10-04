@@ -350,20 +350,20 @@
             </section>
 
             <!--==================== SUBSCRIBE ====================-->
-            <section class="subscribe section">
+           <section class="subscribe section">
                 <div class="subscribe__bg">
                     <div class="subscribe__container container">
                         <h2 class="section__title subscribe__title">Επικοινωνήστε <br> Μαζί Μας</h2>
                         <p class="subscribe__description">Στείλτε μας το μήνυμά σας για οποιαδήποτε απορία και η ομάδα μας θα επικοινωνήσει το συντομότερο.</p>
-            
-                        <a href="mailto:hoopsntalira@gmail.com?subject=New Message" class="button">
-                            Αποστολή
-                        </a>
+                        
+                        <form action="mailto:your-email@example.com" method="post" enctype="text/plain" class="subscribe__form">
+                            <input type="text" name="message" placeholder="Το μήνυμά σας..." class="subscribe__input" required>
+                            <button type="submit" class="button">Αποστολή</button>
+                        </form>
                     </div>
                 </div>
             </section>
-
-            
+      
             <!--==================== SPONSORS ====================-->
             <section class="sponsor section">
                 <div class="sponsor__container container grid">
