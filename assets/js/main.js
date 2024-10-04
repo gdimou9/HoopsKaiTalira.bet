@@ -196,3 +196,23 @@ document.getElementById("genieLampButton").addEventListener("click", function() 
         });
     }, 1000); // Match this duration to the smoke animation duration
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const ageConfirmation = document.getElementById('age-confirmation');
+    const confirmButton = document.getElementById('confirm-age');
+    const exitButton = document.getElementById('exit-site');
+    const mainContent = document.getElementById('main-content');
+
+    // Show the age confirmation modal
+    ageConfirmation.style.display = 'flex';
+
+    confirmButton.addEventListener('click', () => {
+        ageConfirmation.style.display = 'none'; // Hide the modal
+        mainContent.style.display = 'block'; // Show the main content
+    });
+
+    exitButton.addEventListener('click', () => {
+        alert('Λυπάμαι, δεν μπορείτε να εισέλθετε στην ιστοσελίδα.');
+        window.location.href = 'https://www.example.com'; // Replace with your desired exit page
+    });
+});
