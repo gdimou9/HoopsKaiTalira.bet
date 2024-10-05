@@ -213,6 +213,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     exitButton.addEventListener('click', () => {
         alert('Δυστυχώς, δεν μπορείτε να εισέλθετε στην ιστοσελίδα, καθώς απαιτείται να είστε τουλάχιστον 18 ετών!');
-        window.location.href = 'https://www.google.com'; // Replace with your desired exit page
+        window.location.href = 'https://www.opap.gr/upeuthino-paixnidi-opap'; // Replace with your desired exit page
     });
 });
